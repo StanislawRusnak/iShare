@@ -48,7 +48,7 @@ public class DiscoveryDAOImpl implements DiscoveryDAO{
 		int update = template.update(CREATE_DISCOVERY, paramSource, holder);
 		if(update>0) {
 			try {
-			resultDisc.setId((Long) holder.getKey());
+			resultDisc.setId(holder.getKey().longValue());
 			}catch(Exception e) {
 				e.printStackTrace();
 			}

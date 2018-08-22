@@ -32,7 +32,7 @@ public class UserDAOImpl implements UserDAO{
 		int update = template.update(CREATE_USER, paramSource, holder);
 		if(update>0) {
 			try {
-			resultUser.setId((long)holder.getKey());
+			resultUser.setId(holder.getKey().longValue());
 			
 			}catch(Exception e) {
 				e.printStackTrace();

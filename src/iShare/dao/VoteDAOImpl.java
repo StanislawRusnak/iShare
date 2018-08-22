@@ -41,7 +41,7 @@ public class VoteDAOImpl implements VoteDAO{
 		if(rowsAffected>0) {
 			try {
 				try {
-					copyVote.setId((long) key.getKey());
+					copyVote.setId(key.getKey().longValue());
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
